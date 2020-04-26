@@ -7,3 +7,11 @@
 -fx-border-weight: 1px;
 -fx-border-style: solid;
 }
+#forwardButton{
+-fx-shape: "M 95,50 5,95 5,5 z";
+-fx-color: "gray";
+}
+#backwardButton{
+-fx-shape: "M 5,50 97.5,5 97.5,95 Z";
+-fx-color: "gray";
+}

@@ -11,7 +11,7 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 public class Controller {
-    public void handleButtonAction(ActionEvent actionEvent) {
+    public void handleButtonActionForward(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sample2.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
@@ -22,5 +22,18 @@ public class Controller {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public void handleButtonActionBackward(ActionEvent actionEvent){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sample.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Exercises");
+            stage.setScene(new Scene(root1,600,700));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }

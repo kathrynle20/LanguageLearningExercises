@@ -40,8 +40,10 @@
         </children>
     </VBox>
 
-    <HBox GridPane.rowIndex="3" GridPane.columnIndex="2" GridPane.columnSpan="2">
-        <Button onAction="#handleButtonAction"/>
+    <HBox GridPane.rowIndex="3" GridPane.columnIndex="2" GridPane.columnSpan="1" alignment="BASELINE_CENTER" spacing="5">
+        <Button fx:id="backwardButton" onAction="#handleButtonActionBackward"/>
+        <Label text="Tab 2 out of 2"/>
+        <Button fx:id="forwardButton" onAction="#handleButtonActionForward"/>
 
     </HBox>
 
