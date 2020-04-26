@@ -1,0 +1,9 @@
+#Exercises{
+-fx-font-weight:bold;
+-fx-font-family: "Cambria", sans-serif;
+-fx-font-size: 30px;
+}
+#textBox{
+-fx-border-weight: 1px;
+-fx-border-style: solid;
+}

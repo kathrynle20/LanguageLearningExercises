@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.HBox?>
+
+<GridPane alignment="center" hgap="10" stylesheets="/sample/sample.css" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="sample.Controller">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+
+    <Label text="Exercises" fx:id="Exercises" GridPane.rowIndex="1" GridPane.columnIndex="1"></Label>
+
+    <ImageView fitWidth="100" fitHeight="150" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <Image url="https://en.pimg.jp/032/460/778/1/32460778.jpg" />
+    </ImageView>
+
+    <VBox fx:id="textBox" spacing="5" GridPane.rowIndex="2" GridPane.columnIndex="2" >
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        <Label text="This is the first multiple choice question"></Label>
+        <fx:define>
+            <ToggleGroup fx:id="mcToggleGroup"/>
+        </fx:define>
+        <children>
+            <RadioButton text="Option 1" toggleGroup="$mcToggleGroup"/>
+            <RadioButton text="Option 2" toggleGroup="$mcToggleGroup"/>
+            <RadioButton text="Option 3" toggleGroup="$mcToggleGroup"/>
+            <RadioButton text="Option 4" toggleGroup="$mcToggleGroup"/>
+        </children>
+    </VBox>
+
+    <HBox GridPane.rowIndex="3" GridPane.columnIndex="2" GridPane.columnSpan="2">
+        <Button onAction="#handleButtonAction"/>
+
+    </HBox>
+
+
+
+</GridPane>
