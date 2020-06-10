@@ -13,14 +13,17 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.layout.HBox?>
 
-<GridPane alignment="center" hgap="10" stylesheets="/sample/sample.css" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="sample.Controller">
+
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<GridPane fx:id="gridpane" alignment="center" hgap="10" stylesheets="/sample/sample.css" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="sample.Controller">
     <padding>
         <Insets bottom="10" left="10" right="10" top="10" />
     </padding>
 
     <Label text="Exercises" fx:id="Exercises" GridPane.rowIndex="1" GridPane.columnIndex="1"></Label>
 
-    <ImageView fitWidth="100" fitHeight="150" GridPane.columnIndex="1" GridPane.rowIndex="2">
+    <ImageView fitWidth="115" fitHeight="150" GridPane.columnIndex="1" GridPane.rowIndex="2">
         <Image url="https://en.pimg.jp/032/460/778/1/32460778.jpg" />
     </ImageView>
 
@@ -28,7 +31,7 @@
         <padding>
             <Insets bottom="10" left="10" right="10" top="10" />
         </padding>
-        <Label text="This is the first multiple choice question"></Label>
+        <Label fx:id="QuestionLabel" ></Label>
         <fx:define>
             <ToggleGroup fx:id="mcToggleGroup"/>
         </fx:define>
@@ -42,7 +45,7 @@
 
     <HBox GridPane.rowIndex="3" GridPane.columnIndex="2" GridPane.columnSpan="1" alignment="BASELINE_CENTER" spacing="5">
         <Button fx:id="backwardButton" onAction="#handleButtonActionBackward"/>
-        <Label text="Tab 1 out of 2"/>
+        <Label fx:id="tabLabel" text="Tab 1 out of 2" />
         <Button fx:id="forwardButton" onAction="#handleButtonActionForward"/>
     </HBox>
 
